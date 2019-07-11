@@ -1,0 +1,46 @@
+<a class="btn btn-warning btn-md" routerLink="/employee">
+  <i class="fa fa-plus"></i> Add New Employee</a>
+
+<div class="p-1">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header btn-#00e676 green accent-3 text-white">
+            <h2 class="card-title">
+              <i class="fa fa-employee-hunt" aria-hidden="true"></i> Employees</h2>
+          </div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead class="blue-grey lighten-4 text-center">
+                <tr>
+                  <th>Employee ID</th>
+                  <th>Employee Name</th>
+                  <th>Employee Address</th>
+                  <th>Employee Tel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let employee of employees" class="text-center">
+                  <td>{{employee.id}}</td>
+                  <td>{{employee.name}}</td>
+                  <td>{{employee.address}}</td>
+                  <td>{{employee.tel}}</td>
+                  <td>
+
+                    <a class="btn btn-danger btn-sm" (click)="deleteEmployee(employee.id)">Delete</a>
+
+                  </td>
+                  <td>
+                    <a class="btn btn-outline-warning btn-sm" [routerLink]="['/updateEmployee', employee.id]">Update</a>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

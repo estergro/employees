@@ -1,0 +1,48 @@
+<a class="btn btn-primary btn-lg" routerLink="/">
+  <i class="fa fa-arrow-left"></i> Back</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            Add New Employee
+          </h2>
+        </div>
+        <div class="card-body">
+          <form id="formNewEmployee" name='formNewEmployee' #employeeData="ngForm" (ngSubmit)="addNewEmployee(employeeData.value)">
+            <div class="form-group">
+              <label>Employee ID:</label>
+              <input class="form-control" type="number" name="p_id" id="p_id" placeholder="Enter Employee ID" ngModel>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <label>Employee Name:</label>
+              <input class="form-control" type="text" name="p_name" id="p_name" placeholder="Enter Employee Name" ngModel>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label>Employee Address</label>
+              <input class="form-control" type="number" name="p_cost" id="p_cost" placeholder="Enter Employee Address" ngModel>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label>Employee Tel</label>
+              <input class="form-control" type="number" name="tel" id="tel" placeholder="Enter Employee Tel" ngModel>
+            </div>
+            <br>
+
+            <input class="btn btn-success justify ml-5" type="submit" value="Add Employee">
+          </form>
+          <h3 class="text-success" *ngIf="isAdded">{{confirmationString}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
