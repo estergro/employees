@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
-
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
 
     RouterModule.forRoot([
       { path: '', component: EmployeeListComponent },

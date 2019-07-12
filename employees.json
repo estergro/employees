@@ -1,10 +1,16 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "ester",
-      "address": "fdsrsdfvsd",
-      "tel": "03518749698"
+      "name": "ester grosbard",
+      "address": "kolert",
+      "tel": 504897514,
+      "id": 1
+    },
+    {
+      "name": "chana falk",
+      "address": "chendilog 5",
+      "tel": 589785425,
+      "id": 2
     }
   ]
 }

@@ -17,8 +17,8 @@ export class EmployeeComponent implements OnInit {
 
     addNewEmployee = function(employee) {
       this.employeeObj = {
-        id: employee.p_id,
-        name: employee.p_name,
+        
+        name: employee.name,
         address: employee.address,
         tel:employee.tel
 
